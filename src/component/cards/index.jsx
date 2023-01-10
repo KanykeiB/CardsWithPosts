@@ -29,7 +29,7 @@ const PostCard= () => {
       })()
     }, [])
     const getData = async (id)=> {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/h${id}`)
         const data = await res.json()
         return data
       }
