@@ -1,7 +1,7 @@
 {
   "name": "lesson8",
   "version": "0.1.0",
-  "homepage": "https://KanykeiB.github.io/CardsWithPosts",
+  "homepage": "https://kanykeib.github.io/CardsWithPosts/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

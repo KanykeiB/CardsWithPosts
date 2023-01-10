@@ -19,8 +19,8 @@ const PostCard= () => {
       (async()=>{
         try{
             setIsLoading(true)
-            const data = await getData()
-            setPost(data[(id-1)])
+            const data = await getData(id)
+            setPost(data)
         } catch(e){
             console.log(e)
         } finally {
@@ -28,8 +28,8 @@ const PostCard= () => {
         }
       })()
     }, [])
-    const getData = async ()=> {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const getData = async (id)=> {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         const data = await res.json()
         return data
       }

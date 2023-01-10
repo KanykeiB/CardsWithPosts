@@ -4,21 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import {BrowserRouter, HashRouter, Switch} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 import PostCard from './component/cards';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Switch>
-    <HashRouter exact path='/CardsWithPosts/'>
-      <App />
+    <HashRouter>
+      <Switch>
+        <Route exact path='/'>
+          <App />
+        </Route>
+        <Route exact path='/posts/:id'>
+          <PostCard />
+        </Route>
+      </Switch>
     </HashRouter>
-    <HashRouter exact path='/CardsWithPosts/posts/:id'>
-      <PostCard />
-    </HashRouter>
-  </Switch>
   </React.StrictMode>
 );
 
